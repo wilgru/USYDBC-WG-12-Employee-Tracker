@@ -1,4 +1,4 @@
-const employeeTracker = require('./helpers/EmployeeTracker');
+const employeeTracker = require('./lib/EmployeeTracker');
 
 const et = new employeeTracker();
 
