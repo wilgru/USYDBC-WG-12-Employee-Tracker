@@ -3,32 +3,31 @@ CREATE DATABASE employee_tracker_db;
 
 USE employee_tracker_db;
 
-CREATE TABLE employees (
-    id INT AUTO_INCRAMENT UNIQUE NOT NULL,
-    first_name VARCHAR(30) NOT NULL,
-    last_name VARCHAR(30) NOT NULL,
-    role_id INT NOT NULL,
-    manager_id INT, (null if the employee has no manager),
-
-    PRIMARY KEY(id)
-    FOREIGN KEY(role_id, manager_id)
-    REFERENCES roles(id), employees(id)
+CREATE TABLE departments (
+    id INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30)
 );
 
 CREATE TABLE roles (
-    id INT AUTO_INCRAMENT UNIQUE NOT NULL,
+    id INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(30) NOT NULL,
     salary DECIMAL NOT NULL,
     department_id INT NOT NULL,
 
-    PRIMARY KEY(id)
     FOREIGN KEY(department_id)
     REFERENCES departments(id)
 );
 
-CREATE TABLE departments (
-    id INT AUTO_INCRAMENT UNIQUE NOT NULL,
-    name VARCHAR(30),
+CREATE TABLE employees (
+    id INT UNIQUE NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(30) NOT NULL,
+    last_name VARCHAR(30) NOT NULL,
+    role_id INT NOT NULL,
+    manager_id INT, 
 
-    PRIMARY KEY(id)
+    FOREIGN KEY(role_id)
+    REFERENCES roles(id),
+
+    FOREIGN KEY (manager_id)
+    REFERENCES employees(id)
 );
