@@ -101,7 +101,7 @@ class questions {
             {
                 name: 'updateEmployeeNewManager',
                 type: 'list',
-                choices: this.managers,
+                choices: this.managers.concat({name: 'N/A', value: null}),
                 message: "New manager: "
             }
         ]
