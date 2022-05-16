@@ -14,7 +14,7 @@ class questions {
                 {
                     name: 'mainMenuChoice',
                     type: 'list',
-                    choices: ['View all departments', 'View all roles', 'View all employees', 'Add new department', 'Add new role', 'Add new employee', 'Update an employee role', 'Update an employee manager'],
+                    choices: ['View all departments', 'View all roles', 'View all employees', 'Add new department', 'Add new role', 'Add new employee', 'Update an employee role', 'Update an employee manager', 'exit'],
                     message: "Please select one of the following options: "
                 }
             ]
