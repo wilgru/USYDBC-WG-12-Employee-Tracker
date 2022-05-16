@@ -35,7 +35,7 @@ Once the program is running, follow the prompts to navigate and use the app.
 <a name="Demonstration"></a>
 ## Demonstration
 
-![usage demo]()
+You can watch a demo of how to use the Emplyee Tracker [here](https://drive.google.com/file/d/1tDp8P-QpvKQDIuXN_xlqiaoVCCqnkGbH/view?usp=sharing).
 
 <a name="License"></a>
 ## License
